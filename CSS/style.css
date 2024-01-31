@@ -1,0 +1,864 @@
+/* Tipografías */
+@font-face {
+    font-family: "Genty";
+    src: url(../fonts/GENTYDEMO-REGULAR.OTF);
+    }
+
+@font-face {
+    font-family: "Bebas";
+    src: url(../fonts/BEBASNEUE-REGULAR.OTF);
+    }
+
+/* Configuración para toda la página */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FFF9A5;
+    text-align: center;
+}
+
+
+/* Configuraciones estéticas para los links*/
+a{
+    outline: none;
+    text-decoration: none;
+    }
+
+a:visited{
+    color:#FFF9A5;
+}
+
+a:focus{
+    color:#00A7E1;
+}
+
+a:active{
+    color: #00A7E1;
+}
+
+/*------------------------------------------ Configuración del menú --------------------------------------------*/
+
+/* Color de fondo del menú*/
+header{
+    background-color:#F15025;
+}
+
+/* Tipografía de cada ítem dentro de la lista */
+header nav ul li{
+    font-family: "Bebas";
+}
+
+/* Como esto es Mobile First comienzo por hacer desaparecer los ítems del menú en formato mobile */
+    header div div div a{
+        display: none;
+    }
+
+/* Logo de Sur Empanadas adaptado al menú */
+.logo_menu_adaptado{ 
+    width: 14rem;
+    height: auto;
+}
+
+.imagen_portada_mobile{
+    max-width: 1024px;
+    height: auto;
+}
+
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 167, 225, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler {
+    border-color:  #00A7E1;
+}
+
+/*------------------------------------------- MEDIA QUERY MENÚ ------------------------------------------------*/
+@media screen and (min-width:1024px){
+    header div div div a{
+        display: block;
+    }
+}
+
+
+/*----------------------------------------- Configuración del footer ------------------------------------------*/
+
+/* Oculto el footer que se mostrará en Desktop */
+.footer_desktop{
+    display: none;
+}
+
+/* Color del footer */
+footer{
+    background-color: #F15025;
+}
+
+/* Tipografía y color del texto dentro del footer */
+footer h2{
+    font-family: "Bebas";
+    color: #00A7E1;
+    text-align: center;
+}
+
+.redes{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    list-style: none;
+    gap: 1rem;
+}
+
+.conjunto_footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.logo{
+    grid-area: logo;
+    justify-self: center;
+    align-self: center;
+}
+
+/* Detalles estéticos */
+
+footer div div div nav ul li{
+    list-style: none;
+}
+
+.footer_foto{
+	width: 200px;
+}
+
+.footer_logos{
+    width: 30px;
+    height: 30px;
+}
+
+/*------------------------------------------- MEDIA QUERY FOOTER ------------------------------------------------*/
+/*------------------------------------------------- TABLET ------------------------------------------------------*/
+
+@media screen and (min-width:768px){
+
+    /* Modifico la disposición del footer para mostrar todo en una misma fila, pero esta vez en tres columnas. Separo un poco los íconos de redes sociales */
+    footer div nav ul{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "titulo redes logo";
+    }
+    
+    .redes{
+        gap: 5rem;
+    }
+}
+
+/*------------------------------------------------ DESKTOP ------------------------------------------------------*/
+
+@media screen and (min-width:1024px){
+    .footer_desktop{
+        display: block;
+    }
+
+    .footer_mobile{
+        display: none;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------------------------*/
+
+
+/*--------------------------------------- Configuración de cada página ----------------------------------------*/
+
+/*------------------------------------------------- INDEX -----------------------------------------------------*/
+
+/* Detalles estéticos */
+header .imagen_desktop, .gusto3, .gusto4, .proceso_desktop{
+    display: none;
+}
+
+main nav div img .proceso_desktop{
+    display: none;
+}
+
+.seccion_donde_desktop{
+    display: none;
+}
+
+.cartel_inicio{
+    display: none;
+}
+
+.recetas_main_tablet, .recetas_main_desktop{
+    display: none;
+}
+
+.imagen_adaptada{
+    max-width: 100%;
+}
+
+.gustos_mobile{
+    max-width: 10rem;
+    width: 90vh;
+}
+
+.titulo_recetas_main{
+    display: inline-block;
+    background-color:#00A7E1;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    font-family: "Genty";
+    color: #FFF9A5;
+    text-align: center;
+}
+
+.titulo_texto_main{
+    display: inline-block;
+    background-color:#F15025;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    font-family: "Genty";
+    color: #FFF9A5;
+    text-align: center;
+}
+
+.donde_titulo_main{
+    display: inline-block;
+    background-color:#F15025;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    font-family: "Genty";
+    color:#00A7E1;
+    text-align: center;
+}
+
+.seccion_recetas{
+    background-color:#F15025;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.seccion_empanadas{
+    background-color: #00A7E1;
+    font-family: "Bebas";
+    color: #FFF9A5;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Condición de Flex de las secciones "Fotos de empanadas" y "¿Dónde comer?". Configuración de los elementos Flex */
+
+.seccion_recetas_empanadas{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.donde_fotos{
+    display: flex;
+    justify-content:center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+/* Detalles estéticos de la sección "Recetas" */
+
+.conjunto_titulo_texto{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+/* Detalles estéticos para la seccion de texto de empanadas */
+
+.texto_main{
+    background-color:#00A7E1;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.texto_texto{
+    font-family: "Bebas";
+    color: #FFF9A5;
+    text-align: center;
+}
+
+/* Detalles estéticos para la seccion ¿Dónde Comer? */
+
+.donde_titulo{
+    display: inline-block;
+    font-family: "Genty";
+    color:#00A7E1;
+}
+
+.donde_main_imagenes{
+
+    min-width: 100px;
+}
+
+/*-------------------------------------------- MEDIA QUERY INDEX ------------------------------------------------*/
+/*------------------------------------------------- TABLET ------------------------------------------------------*/
+
+@media screen and (min-width:768px){
+
+    .recetas_main_mobile, .recetas_main_desktop{
+        display: none;
+    }
+
+    .recetas_main_tablet{
+        display: block;
+    }
+
+    /* Mostrar la imagen gusto3 */
+
+    .gusto3{
+        display: block;
+    }
+
+    .seccion_donde_mobile{
+        display: none;
+    }
+
+    .seccion_donde_desktop{
+        display: block;
+    }
+
+    .seccion_recetas_empanadas{
+        gap: 2rem;
+    }
+
+}
+
+/*------------------------------------------------ DESKTOP ------------------------------------------------------*/
+
+@media screen and (min-width:1024px){
+
+    .recetas_main_mobile, .recetas_main_tablet{
+        display: none;
+    }
+
+    .recetas_main_desktop{
+        display: block;
+    }
+    
+    /* Mostrar las opciones del menú */
+    .lista_menu .basicos_menu, .recetas_menu, .donde_comer_menu, .sobre_mi_menu{
+        display: block;
+    }
+
+    /* Cambio la imagen de portada por otra, oculto la imagen de mobile */
+    .imagen_mobile{
+        display: none;
+    }
+    
+    header .imagen_desktop{
+        display: block;
+    }
+
+    /* Mostrar la imagen gusto4 */
+    .gusto4{
+        display:block
+    }
+
+    /* Mostrar la imagen donde_3 */
+    .donde_3{
+        display: block;
+    }
+
+    /* Separo un poco las imágenes de la sección "Recetas" y "¿Dónde comer?" */
+    .seccion_recetas_empanadas{
+        gap: 3rem;
+    }
+
+    .donde_fotos{
+        gap: 3rem;
+    }
+
+}
+
+/*------------------------------------------------- BÁSICOS -----------------------------------------------------*/
+/* Detalles estéticos */
+
+.configuracion_desktop_basicos{
+    display: none;
+}
+
+.titulo_basicos{
+    font-family: "Genty";
+    color: #F15025;
+}
+
+.texto_principal_basicos_mobile{
+    padding: 3%;
+    background-color: #FFF9A5;
+}
+
+.texto_basicos1{
+    font-family: "Bebas";
+    color: #00A7E1;
+    text-align: center;
+}
+
+.la_masa{
+    font-family: "Genty";
+    color:#F15025;
+    background-color: #00A7E1;
+}
+
+.texto_basicos2{
+    font-family: "Bebas";
+    color:#FFF9A5;
+    background-color: #00A7E1;
+    text-align: center;
+}
+
+.el_repulgue{
+    font-family: "Genty";
+    color: #00A7E1;
+}
+
+.el_repulgue_desktop{
+    display: none;
+}
+
+.texto_basicos3{
+    font-family: "Bebas";
+    color:#F15025;
+    text-align: center;
+}
+
+.fotos_basicos{
+    width: 50vw;
+    max-width: 400px;
+}
+
+/* Condición de Flex de las secciones "La Masa" y "El Repulgue". Configuración de los elementos Flex */
+
+.texto_principal_basicos{
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+}
+
+.texto_masa_basicos{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 70%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.texto_repulgue_basicos{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 70%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.conjunto_masa{
+    display: flex;
+    flex-direction: column;
+    background-color: #00A7E1;
+}
+
+.conjunto_repulgue{
+    display: flex;
+    flex-direction: column;
+}
+
+/*------------------------------------------- MEDIA QUERY BÁSICOS -----------------------------------------------*/
+/*------------------------------------------------- DESKTOP -----------------------------------------------------*/
+
+@media screen and (min-width:1024px){
+
+    /*Hago que el cartel de básicos quede superpuesto con la imagen de portada de la página*/
+
+    .texto_principal_basicos_mobile{
+        display: none;
+    }
+
+    .configuracion_desktop_basicos{
+        display: block;
+        margin: 0;
+        position: relative;
+    }
+
+    .texto_principal_basicos{
+        position: absolute;
+        background-color: #FFF9A5;
+        width: 45%;
+        height: auto;
+        top: 15%;
+        bottom: 20%;
+        left: 2%;
+    }
+
+    /*Hago que las secciones "La Masa" y "El Repulgue" tengan la imagen al costado, una sección con la imagen a la derecha y otra con la imagen a la izquierda */
+
+    .conjunto_masa{
+        flex-direction: row;
+        align-items: center;
+        justify-items: center;
+        gap: 1%;
+        padding-right: 2%;
+        padding-left: 2%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    .conjunto_repulgue{
+        flex-direction: row;
+        align-items: center;
+        justify-items: center;
+        gap: 1%;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    .el_repulgue_desktop{
+        display: block;
+    }
+
+    .el_repulgue_mobile{
+        display: none;
+    }
+
+    .imagen_basicos_desktop{
+        max-width: 500px;
+    }
+
+}
+
+/*-------------------------------------------------- RECETAS ----------------------------------------------------*/
+/* Detalles estéticos */
+
+header .portada_desktop_recetas{
+    display: none;
+} 
+
+main .receta_empanada_tablet_desktop{
+    display: none;
+}
+
+.configuracion_desktop_recetas{
+    display: block;
+    margin: 0;
+    position: relative;
+}
+
+.textos_portada_recetas{
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    bottom: 40%;
+}
+
+.titulo_recetas{
+    display: inline-block;
+    font-family: "Genty";
+    background-color:#FFF9A5;
+    color: #00A7E1;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 6vw;
+}
+
+.subtitulo_recetas{
+    display: inline-block;
+    font-family: "Bebas";
+    background-color: #F15025;
+    color: #FFF9A5;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-size: 5vw;
+
+}
+
+.titulo_recetas_rojo{
+    font-family: "Genty";
+    color: #F15025;
+}
+
+.titulo_recetas_azul{
+    font-family: "Genty";
+    color: #00A7E1;    
+}
+
+.cuadrado_rojo{
+    background-color: #F15025;
+    color: #FFF9A5;
+    font-family: "Bebas";
+    list-style: none;
+    padding: 5%;
+}
+
+.cuadrado_azul{
+    background-color:#00A7E1;
+    color: #FFF9A5;
+    font-family: "Bebas";
+    padding: 5%;
+}
+
+.cuadrado_amarillo{
+    background-color:#FFF9A5;
+    font-family: "Bebas";
+    padding: 5%;
+}
+
+.letra_receta_azul{
+    color: #00A7E1;
+    font-family: "Bebas";
+}
+
+.letra_receta_rojo{
+    color:#F15025;
+    font-family: "Bebas";  
+}
+
+.letra_receta_amarillo{
+    color:#FFF9A5;
+    font-family: "Bebas";
+}
+
+.bloque_receta{
+    list-style: none;
+}
+
+.foto_desktop_receta{
+    list-style: none;
+}
+
+.titulo_y_texto_recetas{
+    list-style: none;
+}
+
+/*------------------------------------------- MEDIA QUERY RECETAS -----------------------------------------------*/
+/*------------------------------------------------- TABLET ------------------------------------------------------*/
+
+@media screen and (min-width:600px){
+
+    /* Adaptar la estética a una pantalla más grande */
+
+    main .receta_empanada_tablet_desktop{
+        display: block;
+    }
+
+    main .foto_recetas_mobile{
+        display: none;
+    }
+
+    .receta_empanada_tablet_desktop{
+        padding-top: 3%;
+    }
+
+}
+
+/*-------------------------------------------- TABLET Y DESKTOP -------------------------------------------------*/
+
+@media screen and (min-width:1024px){
+
+    header .portada_desktop_recetas{
+        display: block;
+    }
+
+    header .portada_mobile_recetas{
+        display: none;
+    }
+
+    .titulo_recetas{
+        font-size: 3vw;
+    }
+
+    .subtitulo_recetas{
+        font-size: 2vw;
+    }
+
+    .titulo_y_texto_recetas{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .bloque_receta{
+        display: flex;
+        align-items: center;
+    }
+
+    .cuadrado_rojo{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .cuadrado_azul{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
+    .cuadrado_amarillo{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+}
+
+/*---------------------------------------------- ¿DÓNDE COMER? --------------------------------------------------*/
+/* Detalles estéticos */
+
+.portada_desktop_recetas{
+    display: none;
+}
+
+.mapa{
+    margin-top: 5%;
+}
+
+.titulo_recomendaciones{
+    color: #00A7E1;
+    font-size: xx-large;
+    font-family: "Genty";
+    padding-top: 5%;
+}
+
+.invitacion_recomendaciones{
+    display: inline-block;
+    background-color: #F15025;
+    color: #FFF9A5;
+    font-family: "Bebas";
+    font-size: x-large;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.titulo_galeria_donde{
+    display: inline-block;
+    background-color: #00A7E1;
+    color: #FFF9A5;
+    font-family: "Genty";
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 5px;
+}
+
+/*---------------------------------------- MEDIA QUERY ¿DÓNDE COMER? --------------------------------------------*/
+/*------------------------------------------------ DESKTOP ------------------------------------------------------*/
+@media screen and (min-width:1024px){
+
+    .portada_mobile_recetas{
+        display: none;
+    }
+
+    .portada_desktop_recetas{
+        display: block;
+    }
+
+    .bloque_texto_recomendaciones{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .mapa{
+        width: 90%;
+    }
+
+    .bloque_recomendaciones{
+        display: flex;
+        align-items: center;
+    }
+}
+
+/*------------------------------------------------- SOBRE MÍ ----------------------------------------------------*/
+/* Detalles estéticos */
+
+.foto_sobre_mi{
+    width: 100vw;
+    max-width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.texto_sobre_mi{
+    display: inline-block;
+    margin: 10px;
+}
+
+.bebas_rojo{
+    font-family: "Bebas";
+    color: #F15025;
+}
+
+.bebas_azul{
+    font-family: "Bebas";
+    color:#00A7E1;
+}
+
+.bebas_amarillo{
+    font-family: "Bebas";
+    color:#FFF9A5;
+    background-color:#F15025;
+    margin: 5%;
+}
+
+.genty_azul{
+    font-family: "Genty";
+    color:#00A7E1;
+}
+
+.leyenda_contactame{
+    display: inline-block;
+}
+
+.botones_formulario{
+    font-family: "Genty";
+    color:#00A7E1;
+    background-color:#F15025;
+    font-size: x-large;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border: none;
+}
+
+.formulario{
+    margin: 10px;
+    border-color: #F15025;
+    border-style:solid;
+}
+
+/*------------------------------------------ MEDIA QUERY SOBRE MÍ -----------------------------------------------*/
+/*------------------------------------------------ DESKTOP ------------------------------------------------------*/
+@media screen and (min-width:1024px){
+
+    .texto_sobre_mi{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 40%;
+    }
+
+    .grupo_sobre_mi{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}

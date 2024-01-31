@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sur Empanadas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./img/4.png">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+
+<body>
+<!-- Armo el menú con las clases de Bootstrap. Incluyo un navbar que se mostrará solamente en pantallas mobile y tablet. En pantallas más grandes se mostrará otro menú -->
+    <header>
+            <nav class="navbar navbar-expand-lg d-lg-none" style="color:#F15025 ;">
+                <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a style="font-size:x-large; font-family:Bebas; color:#FFF9A5" href="./pages/basicos.html">Básicos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size:x-large; font-family:Bebas; color:#FFF9A5" href="./pages/recetas.html">Recetas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-center" style="font-size:x-large; font-family:Bebas; color:#FFF9A5" href="./pages/donde_comer.html">¿Dónde comer?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size:x-large; font-family:Bebas; color:#FFF9A5" href="./pages/sobre_mi.html">Sobre Mí</a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+            <a class="navbar-brand abs-center mx-auto d-lg-none" href="./index.html"><img class="logo_menu_adaptado" src="./img/logo_menu2.png" alt="logo_menu" width="30" height="24"></a>
+    </header>
+
+    <header class="detalle_header">
+        <div class="container-fluid text-center d-none d-lg-block">
+            <div class="row">
+                    <div class="col align-self-center">
+                        <a style="font-size:x-large; font-family:Bebas; color:#FFF9A5" href="./pages/basicos.html">Básicos</a>
+                    </div>
+                    <div class="recetas_menu col align-self-center">
+                        <a style="font-size:x-large; font-family:Bebas; color:#FFF9A5" href="./pages/recetas.html">Recetas</a>
+                    </div>
+                    <nav class="col">
+                        <a href="./index.html"><img class="logo_menu_adaptado" src="./img/logo_menu2.png" alt="logo_menu"></a>
+                    </nav>
+                    <div class="donde_comer_menu col align-self-center">
+                        <a class="text-center" style="font-size:x-large; font-family:Bebas; color:#FFF9A5" href="./pages/donde_comer.html">¿Dónde comer?</a>
+                    </div>
+                    <div class="sobre_mi_menu col align-self-center">
+                        <a style="font-size:x-large; font-family:Bebas; color:#FFF9A5" href="./pages/sobre_mi.html">Sobre mí</a>
+                    </div>
+            </div>
+        </div>
+        <nav>
+            <div><img class="imagen_adaptada imagen_mobile" src="img/portada_mobile.png" alt="portada_inicio_mobile"></div>
+            <div><img class="imagen_adaptada imagen_desktop" src="img/foto_portada.png" alt="portada_inicio_desktop"></div>
+        </nav>
+    </header>
+
+<!-- Configuro el main de la página de inicio con Bootstrap -->
+
+<!-- Armo tres "Recetas" distintos, uno para mobile, otro para tablet y otro para desktop -->
+    <main>
+        <div class="recetas_main_mobile">
+            <div class="seccion_recetas">
+                <h1 class="cartel_inicio">Inicio</h1>
+                <nav class="recetas_main">
+                    <nav>
+                        <h2 class="titulo_recetas_main" style="font-size:x-large">Recetas</h2>
+                    </nav>
+
+                    <nav class="seccion_recetas_empanadas">
+                            <div><a href="./pages/recetas.html"><img class="gustos_mobile" src="./img/gusto1.png" alt="jamon_y_queso"></a></div>
+                            <div><a href="./pages/recetas.html"><img class="gustos_mobile" src="./img/gusto2.png" alt="arabe"></a></div>
+                    </nav> 
+                </nav>
+            </div>
+        </div>
+
+        <div class="recetas_main_tablet">
+            <div class="seccion_recetas">
+                <h1 class="cartel_inicio">Inicio</h1>
+                <nav class="recetas_main">
+                    <nav>
+                        <h2 class="titulo_recetas_main" style="font-size:x-large">Recetas</h2>
+                    </nav>
+    
+                    <nav class="seccion_recetas_empanadas">
+                            <div><a href="./pages/recetas.html"><img class="gustos_mobile" src="./img/gusto1.png" alt="jamon_y_queso"></a></div>
+                            <div><a href="./pages/recetas.html"><img class="gustos_mobile" src="./img/gusto2.png" alt="arabe"></a></div>
+                            <div><a href="./pages/recetas.html"><img class="gustos_mobile gusto3" src="./img/gusto3.png" alt="carne"></a></div>
+                    </nav> 
+                </nav>
+            </div>
+        </div>
+
+        <div class="recetas_main_desktop">
+            <div class="seccion_recetas">
+                <h1 class="cartel_inicio">Inicio</h1>
+                <nav class="recetas_main">
+                    <nav>
+                        <h2 class="titulo_recetas_main" style="font-size:x-large">Recetas</h2>
+                    </nav>
+                    <nav class="seccion_recetas_empanadas">
+                            <div><a href="./pages/recetas.html"><img class="gustos_mobile" src="./img/gusto1.png" alt="jamon_y_queso"></a></div>
+                            <div><a href="./pages/recetas.html"><img class="gustos_mobile" src="./img/gusto2.png" alt="arabe"></a></div>
+                            <div><a href="./pages/recetas.html"><img class="gustos_mobile gusto3" src="./img/gusto3.png" alt="carne"></a></div>
+                            <div><a href="./pages/recetas.html"><img class="gustos_mobile gusto4" src="./img/gusto4.png" alt="verdura"></a></div>
+                    </nav> 
+                </nav>
+            </div>
+        </div>
+
+        <div class="container-fluid seccion_empanadas">
+            <div class="row">
+                <div class="col-lg align-self-center">
+                    <div>
+                        <div><h2 class="titulo_texto_main" style="font-size:x-large">Empanadas</h2></div>
+
+                        <div><p style="font-size: larger;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio doloremque aspernatur earum nobis aliquam saepe? Magnam autem quo rem itaque! Debitis nemo dolor, repellendus consectetur nam quas distinctio aliquid architecto et eligendi pariatur odit atque perspiciatis perferendis recusandae illo rem libero officiis ad obcaecati tempore dicta. Sequi dicta officiis velit sint consequatur earum dolorem optio asperiores. Commodi eos odio dolore labore alias quis similique vitae? Optio ipsum nesciunt pariatur facere!</p></div>
+                    </div>
+                </div>
+
+                <div class="col-lg">
+                    <img class="imagen_adaptada" src="./img/proceso_mobile.png" alt="proceso">
+                </div>
+            </div>
+        </div>
+
+<!-- Armo dos "¿Dónde Comer?" distintos, uno para mobile y otro para desktop -->
+
+        <div class="container-fluid seccion_donde_mobile">
+            <div class="row justify-content-center">
+                <div class="donde_titulo_main col-auto">
+                    <h2 style="font-size: x-large;">¿Donde?</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="donde_fotos">
+                    <div><a class="donde_1" href="./pages/donde_comer.html"><img src="./img/negocio1.jpg" alt="negocio1"></a></div>
+                    <div><a class="donde_2" href="./pages/donde_comer.html"><img src="./img/negocio2.jpg" alt="negocio2"></a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid seccion_donde_desktop">
+            <div class="row justify-content-center">
+                <div class="donde_titulo_main col-auto">
+                    <h2 style="font-size: x-large;">¿Donde?</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="donde_fotos">
+                    <div><a class="donde_1" href="./pages/donde_comer.html"><img src="./img/negocio1.jpg" alt="negocio1"></a></div>
+                    <div><a class="donde_2" href="./pages/donde_comer.html"><img src="./img/negocio2.jpg" alt="negocio2"></a></div>
+                    <div><a class="donde_3" href="./pages/donde_comer.html"><img src="./img/negocio3.jpg" alt="negocio3"></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Copio el script de JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+
+<!-- Armo el footer con las clases de Bootstrap -->
+<!-- Armo dos footers distintos, uno para mobile y otro para desktop -->
+<footer class="footer_mobile">
+    <div class="container-fluid text-align">
+        <div class="row">
+            <div class="col align-self-center">
+                <nav>
+                    <ul>
+                        <div class="conjunto_footer align-self-center">
+                            <div><li class="titulo"><h2>¡Encontrémonos!</h2></li></div>
+                            <div class="redes">
+                                <li><a href="https://www.instagram.com/triana.giraldi/" target="_blank"><img class="footer_logos" src="./img/logo_instagram.png" alt="logo_instagram"></a></li>
+                                <li><a href="https://www.linkedin.com/in/triana-giraldi/" target="_blank"><img class="footer_logos" src="./img/logo_linkedin.png" alt="logo_linkedin"></a></li>
+                                <li><a href="https://trianagiraldi.wixsite.com/portfolio" target="_blank"><img class="footer_logos" src="./img/logo_web.png" alt="logo_web"></a></li>
+                            </div>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col">
+                <div class="logo"><img class="footer_foto align-self-center" src="./img/logo_footer2.png" alt="logo_footer"></div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<footer class="footer_desktop">
+    <div class="container-fluid text-align">
+        <div class="row">
+            <div class="col align-self-center titulo"><h2 class="encontremonos">¡Encontrémonos!</h2></div>
+            <div class="col align-self-center">
+                <nav>
+                    <ul>
+                        <div class="redes">
+                            <li><a href="https://www.instagram.com/triana.giraldi/" target="_blank"><img class="footer_logos" src="./img/logo_instagram.png" alt="logo_instagram"></a></li>
+                            <li><a href="https://www.linkedin.com/in/triana-giraldi/" target="_blank"><img class="footer_logos" src="./img/logo_linkedin.png" alt="logo_linkedin"></a></li>
+                            <li><a href="https://trianagiraldi.wixsite.com/portfolio" target="_blank"><img class="footer_logos" src="./img/logo_web.png" alt="logo_web"></a></li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col">
+                <div class="logo"><img class="footer_foto align-self-center" src="./img/logo_footer2.png" alt="logo_footer"></div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</html>
+
